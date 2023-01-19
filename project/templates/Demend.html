@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1C-разработчик</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+{% for nav in navigation %}
+
+
+<header>
+    <a href="/">
+        <img class="logo" src="{{ nav.logo_field.url }}">
+    </a>
+    <img class="title_logo" src="{{ nav.logo.url }}">
+</header>
+<main>
+    <div class="body">
+        <div class="navigation" style="height: 850px">
+            <nav>
+                <ul>
+                    <li><a href="/">{{ nav.first_menu }}</a></li>
+                    <li><a href={% url 'demend' %}>{{ nav.second_menu }}</a></li>
+                    <li><a href={% url 'geography' %}>{{ nav.thierd_menu }}</a></li>
+                    <li><a href={% url 'skills' %}>{{ nav.fourth_menu }}</a></li>
+                    <li><a href={% url 'lastVacancy' %}>{{ nav.fifth_menu }}</a></li>
+                </ul>
+            </nav>
+        </div>
+        {% endfor %}
+        <div class="home_text" style="margin-top: 5%; margin-left: 0%">
+           {% for demand in demand_info %}
+            <img class="demand_graph_1" src="{{ demand.photo1.url }}"/>
+            <img class="demand_graph_2" src="{{ demand.photo2.url }}"/>
+            
+            <div class="tables, demandtable" >
+                <table border="1" class="dataframe, demandtable2" style="border: solid; border-color:#525252">
+                    <thead style="border: solid; border-color:#2B2B2B">
+                        <tr>
+                            <th>Год</th>
+                            <th>Средняя зарплата</th>
+                            <th>Средняя зарплата - 1С-разработчика</th>
+                            <th>Количество вакансий - 1С-разработчик</th>
+                            <th>Количество вакансий</th>
+                        </tr>
+                    </thead>
+                    <tbody style="border: solid; border-color:#2B2B2B">
+                        <tr>
+                            <th>2005</th>
+                            <td>93601</td>
+                            <td>74763</td>
+                            <td>80</td>
+                            <td>1836</td>
+                        </tr>
+                        <tr>
+                            <th>2006</th>
+                            <td>93582</td>
+                            <td>85090</td>
+                            <td>929</td>
+                            <td>16229</td>
+                        </tr>
+                        <tr>
+                            <th>2007</th>
+                            <td>102279</td>
+                            <td>97678</td>
+                            <td>1647</td>
+                            <td>24000</td>
+                        </tr>
+                        <tr>
+                            <th>2008</th>
+                            <td>81834</td>
+                            <td>72955</td>
+                            <td>2197</td>
+                            <td>30627</td>
+                        </tr>
+                        <tr>
+                            <th>2009</th>
+                            <td>53351</td>
+                            <td>51942</td>
+                            <td>1429</td>
+                            <td>20989</td>
+                        </tr>
+                        <tr>
+                            <th>2010</th>
+                            <td>49933</td>
+                            <td>57971</td>
+                            <td>2449</td>
+                            <td>31930</td>
+                        </tr>
+                        <tr>
+                            <th>2011</th>
+                            <td>53387</td>
+                            <td>60518</td>
+                            <td>3236</td>
+                            <td>42282</td>
+                        </tr>
+                        <tr>
+                            <th>2012</th>
+                            <td>52049</td>
+                            <td>61417</td>
+                            <td>3388</td>
+                            <td>49309</td>
+                        </tr>
+                        <tr>
+                            <th>2013</th>
+                            <td>56452</td>
+                            <td>64667</td>
+                            <td>4100</td>
+                            <td>68149</td>
+                        </tr>
+                        <tr>
+                            <th>2014</th>
+                            <td>51993</td>
+                            <td>63311</td>
+                            <td>4354</td>
+                            <td>75828</td>
+                        </tr>
+                        <tr>
+                            <th>2015</th>
+                            <td>52695</td>
+                            <td>61559</td>
+                            <td>4363</td>
+                            <td>78934</td>
+                        </tr>
+                        <tr>
+                            <th>2016</th>
+                            <td>62735</td>
+                            <td>61654</td>
+                            <td>5723</td>
+                            <td>85740</td>
+                        </tr>
+                        <tr>
+                            <th>2017</th>
+                            <td>61908</td>
+                            <td>67481</td>
+                            <td>7089</td>
+                            <td>95811</td>
+                        </tr>
+                        <tr>
+                            <th>2018</th>
+                            <td>67679</td>
+                            <td>74088</td>
+                            <td>9259</td>
+                            <td>149308</td>
+                        </tr>
+                        <tr>
+                            <th>2019</th>
+                            <td>71828</td>
+                            <td>80816</td>
+                            <td>8923</td>
+                            <td>130763</td>
+                        </tr>
+                        <tr>
+                            <th>2020</th>
+                            <td>72595</td>
+                            <td>85411</td>
+                            <td>7440</td>
+                            <td>115116</td>
+                        </tr>
+                        <tr>
+                            <th>2021</th>
+                            <td>84102</td>
+                            <td>96157</td>
+                            <td>4128</td>
+                            <td>65205</td>
+                        </tr>
+                        <tr>
+                            <th>2022</th>
+                            <td>97903</td>
+                            <td>116688</td>
+                            <td>1252</td>
+                            <td>20685</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+   {% endfor %}
+</main>
+{% for navigator in navigation %}
+<footer>
+    <a href="https://vk.com/nadyazharkova">
+        <div class="foot">{{ navigator.author }}</div>
+        </a>
+</footer>
+{% endfor %}</body>
+</html>
